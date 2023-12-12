@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Conversion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="title-section">
+            <h1 id="title">Base Conversion</h1>
+            <h2 id="subtitle">Convert a number from and to any base you'd like!</h2>
+        </div>
+        <div class="conversion">
+            <div id="calculation-form" autocomplete="off">
+                <div class="form-group">
+                    <label for="number"> Enter a number:
+                        <input type="text" name="number" id="number" oninput="saveInputNumber(this)">
+                        <span id="error"></span>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="current-base"> From base:
+                        <select name="current-base" id="current-base" onchange="saveSelectedOption(this)"></select>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="convert-base"> To base:
+                        <select name="convert-base" id="convert-base" onchange="saveSelectedOption(this)"></select>
+                    </label>
+                </div>
+                <button id="convert-btn" type="button" onclick="convertHard()">Convert</button>
+            </div>
+            <div id="result-div">
+                <h2>Result:</h2>
+                <p id="result-p">Nothing here yet</p>
+            </div>
+        </div>
+        
+    </div>
+    <script src="base-conversion.js"></script>
+</body>
+</html>
